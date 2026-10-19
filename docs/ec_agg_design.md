@@ -2,7 +2,7 @@
 
 ## 1. Introduction
 
-The Eye Care Case-based Programme Toolkit provides a standardised digital toolkit for collecting, analysing and reporting routine eye care data required to monitor the World Health Organization (WHO) Eye Care Indicator Menu and the integrated people-centred eye care (IPEC) framework.
+The Eye Care Case-based Programme provides a standardised digital toolkit for collecting, analysing and reporting routine eye care data required to monitor the World Health Organization (WHO) Eye Care Indicator Menu and the integrated people-centred eye care (IPEC) framework.
 
 The toolkit is implemented using the DHIS2 aggregate data model and provides a harmonised framework for routine eye care reporting from eye care service delivery points — primary eye care posts, secondary clinics, tertiary hospitals and outreach — to subnational and national programme managers. It enables countries to collect a core set of eye care statistics while remaining flexible enough to accommodate national eye health strategies and reporting arrangements.
 
