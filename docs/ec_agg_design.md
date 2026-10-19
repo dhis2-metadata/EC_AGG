@@ -252,7 +252,7 @@ Where a country already uses a custom paper census form or a tablet-based captur
 
 ## 12. Languages
 
-The toolkit metadata is currently available in English. Translation to additional languages is planned alongside country rollouts: French (for francophone African implementations), Spanish and Russian (for a Central Asian implementation) and the national languages of implementing countries, including Swahili for the Kenya rollout and Sinhala and Tamil for the Sri Lanka rollout.
+The toolkit metadata is currently available in English. Translation to additional languages is planned alongside country rollouts:
 
 ## 13. Intended Users
 
