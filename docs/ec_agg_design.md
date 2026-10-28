@@ -1,10 +1,10 @@
-# Eye Care Case-based Programme — Aggregate Design Guide { #ec-agg-design }
+# Case-based Programme for Eye Care — Aggregate Design Guide { #ec-agg-design }
 
 ## 1. Introduction
 
-The Eye Care Case-based Programme provides a standardised digital toolkit for collecting, analysing and reporting routine eye care data required to monitor the World Health Organization (WHO) Eye Care Indicator Menu and the integrated people-centred eye care (IPEC) framework.
+The Case-based Programme for Eye Care provides a standardised digital toolkit for collecting, analysing and reporting routine eye care data required to monitor the World Health Organization (WHO) standard indicators for case-based reporting on Eye Care and the integrated people-centred eye care (IPEC) framework.
 
-The toolkit is implemented using the DHIS2 aggregate data model and provides a harmonised framework for routine eye care reporting from eye care service delivery points — primary eye care posts, secondary clinics, tertiary hospitals and outreach — to subnational and national programme managers. It enables countries to collect a core set of eye care statistics while remaining flexible enough to accommodate national eye health strategies and reporting arrangements.
+The toolkit is implemented using the DHIS2 aggregate data model and provides a harmonised framework for routine eye care reporting from eye care service delivery points — primary eye care posts, secondary clinics, tertiary hospitals and outreach — to subnational and national programme managers. It enables countries to collect a core set of eye care statistics while remaining flexible enough to accommodate decision making at all levels of the health system, national eye health strategies and reporting arrangements.
 
 The toolkit combines:
 
@@ -16,13 +16,13 @@ The toolkit combines:
 
 Together, these datasets provide the information required to monitor eye care service coverage, cataract surgical outcomes, refractive error correction, referral performance and assistive product availability.
 
-**This is a reference package.** The datasets, data elements, indicators and dashboards it contains are offered as guidance for an implementation, not as a prescriptive standard. Countries are expected to take what fits their national eye health reporting framework, adapt the parts that do not, and extend the package where their policies require more. Nothing in the toolkit assumes that every element will be used, and no part of it is mandatory.
+**This is a reference package.** The datasets, data elements, indicators and dashboards it contains are offered as guidance for an implementation, not as a prescriptive standard. Countries are expected to take what fits their national eye health reporting framework, adapt the parts that do not, and extend the package according to their policies. Nothing in the toolkit assumes that every element will be used, and no part of it is mandatory.
 
 ## 2. Background
 
 Eye care systems require reliable, timely and comparable data to support planning, service delivery, cataract surgical quality assurance and monitoring of national and global eye health commitments.
 
-Many countries collect eye care statistics through fragmented facility registers, programme-specific surveys and cataract audit forms, and these datasets are often difficult to analyse together. The Eye Care Toolkit addresses this challenge by providing a unified metadata package that aligns routine eye care reporting with internationally recognised indicators.
+Many countries collect eye care statistics through fragmented facility registers, programme-specific surveys and cataract audit forms, and these datasets are often difficult to analyse together. This Eye Care Toolkit for case based reporting addresses this challenge by providing a unified metadata package that aligns routine eye care reporting with internationally recognised indicators.
 
 The toolkit is primarily aligned with:
 
@@ -33,16 +33,16 @@ The toolkit is primarily aligned with:
 
 Rather than replacing an existing eye health information system, the toolkit provides a minimum harmonised reporting framework that countries can localise and extend according to national eye health policies.
 
-Two country implementations inform this reference package: a Kenya rollout that drove the first full build of the package (including the Kenya-specific extensions to the cataract surgery pathway and the referral and assistive products modules) and a Sri Lanka rollout in planning at the time of writing, intended to test the package in a second health system context.
+Implementation of this toolkit in pilot countries has informed this reference package.
 
 ## 3. Purpose
 
-The purpose of the Eye Care Toolkit is to provide DHIS2 implementers and Ministries of Health with a reusable metadata package that supports routine collection and analysis of WHO ECIM eye care indicators.
+The purpose of the Case-based programme for eye care is to provide DHIS2 implementers and Ministries of Health with a reusable metadata package that supports routine collection and analysis of the standard WHO indicators.
 
 The toolkit aims to:
 
 1. Standardise eye care data collection across levels of the health system.
-2. Collect the minimum routine eye care data required for ECIM reporting.
+2. Collect the minimum routine eye care data required for reporting.
 3. Harmonise routine eye care reporting with cataract audit and refractive error service reporting.
 4. Improve eye care service planning and resource allocation.
 5. Strengthen monitoring of equity in eye care access, including the referral pathway from community outreach.
@@ -56,13 +56,13 @@ The toolkit supports data collection across three administrative levels.
 | -------------------- | ---------------------------------------------------------------------------------------- |
 | **Facility**         | Routine eye care reporting from service delivery points (primary / secondary / tertiary).|
 | **Subnational**      | District or county aggregation, validation of facility submissions and local analysis.   |
-| **National**         | Programme management, ECIM reporting and national indicator analysis.                    |
+| **National**         | Programme management, selected indicator reporting and national indicator analysis.                    |
 
 Outreach and camp-based services report through the facility that organises them, using the organisation unit under which the camp is registered.
 
 Core design principles
 
-* Harmonised metadata — common eye care data elements aligned with WHO ECIM.
+* Harmonised metadata — common eye care data elements aligned with WHO standard indicators.
 * Scalable architecture — supports national, subnational and facility reporting structures.
 * Modular datasets — five dataset modules per workflow, so a facility reports only on the services it provides.
 * Configurable implementation — countries may add or remove metadata according to national policies.
