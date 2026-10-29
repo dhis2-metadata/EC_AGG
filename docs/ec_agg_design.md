@@ -56,7 +56,7 @@ The toolkit supports data collection across three administrative levels.
 | -------------------- | ---------------------------------------------------------------------------------------- |
 | **Facility**         | Routine eye care reporting from service delivery points (primary / secondary / tertiary).|
 | **Subnational**      | District or county aggregation, validation of facility submissions and local analysis.   |
-| **National**         | Programme management, selected indicator reporting and national indicator analysis.                    |
+| **National**         | Programme management, selected indicator reporting and national indicator analysis.|
 
 Outreach and camp-based services report through the facility that organises them, using the organisation unit under which the camp is registered.
 
