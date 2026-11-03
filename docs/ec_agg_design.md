@@ -2,13 +2,13 @@
 
 ## 1. Introduction
 
-The Case-based Programme for Eye Care provides a standardised digital toolkit for collecting, analysing and reporting routine eye care data required to monitor the World Health Organization (WHO) standard indicators for case-based reporting on Eye Care and the integrated people-centred eye care (IPEC) framework.
+The Case-based Programme for Eye Care provides a standardised digital toolkit for collecting, analysing and reporting routine eye care data required to monitor the World Health Organization (WHO) standard indicators for case-based reporting on Eye Care aligned with the integrated people-centred eye care (IPEC) framework.
 
-The toolkit is implemented using the DHIS2 aggregate data model and provides a harmonised framework for routine eye care reporting from eye care service delivery points — primary eye care posts, secondary clinics, tertiary hospitals and outreach — to subnational and national programme managers. It enables countries to collect a core set of eye care statistics while remaining flexible enough to accommodate decision making at all levels of the health system, national eye health strategies and reporting arrangements.
+This programme is implemented using the DHIS2 aggregate data model and provides a harmonised framework for routine eye care reporting from eye care service delivery points — primary eye care posts, secondary clinics, tertiary hospitals and outreach — to subnational and national programme managers. It enables countries to collect a core set of eye care statistics while remaining flexible enough to accommodate decision making at all levels of the health system, national eye health strategies and reporting arrangements.
 
 The toolkit combines:
 
-1. Case utilisation and condition reporting.
+1. Case utilisation, intervention and condition reporting.
 2. Cataract surgery pathway reporting.
 3. Refractive error service reporting.
 4. Referral and uptake reporting.
@@ -22,13 +22,14 @@ Together, these datasets provide the information required to monitor eye care se
 
 Eye care systems require reliable, timely and comparable data to support planning, service delivery, cataract surgical quality assurance and monitoring of national and global eye health commitments.
 
-Many countries collect eye care statistics through fragmented facility registers, programme-specific surveys and cataract audit forms, and these datasets are often difficult to analyse together. This Eye Care Toolkit for case based reporting addresses this challenge by providing a unified metadata package that aligns routine eye care reporting with internationally recognised indicators.
+Many countries collect eye care statistics through fragmented facility registers, programme-specific surveys and cataract audit forms, and these datasets are often difficult to analyse together. This Eye Care Toolkit for case-based reporting addresses this challenge by providing a unified metadata package that aligns routine eye care reporting with internationally recognised indicators.
 
 The toolkit is primarily aligned with:
 
 * World Health Assembly resolution WHA73.4 on integrated people-centred eye care.
 * The WHO Eye Care Indicator Menu (ECIM).
 * The World report on vision targets for 2030, including effective cataract surgical coverage (eCSC) and effective refractive error coverage (eREC).
+* The WHO Cataract Initiative
 * National eye health strategic plans and routine health information system reporting requirements.
 
 Rather than replacing an existing eye health information system, the toolkit provides a minimum harmonised reporting framework that countries can localise and extend according to national eye health policies.
@@ -56,7 +57,7 @@ The toolkit supports data collection across three administrative levels.
 | -------------------- | ---------------------------------------------------------------------------------------- |
 | **Facility**         | Routine eye care reporting from service delivery points (primary / secondary / tertiary).|
 | **Subnational**      | District or county aggregation, validation of facility submissions and local analysis.   |
-| **National**         | Programme management, selected indicator reporting and national indicator analysis.|
+| **National**         | Programme management, selected indicator reporting and national indicator analysis.      |
 
 Outreach and camp-based services report through the facility that organises them, using the organisation unit under which the camp is registered.
 
@@ -67,7 +68,7 @@ Core design principles
 * Modular datasets — five dataset modules per workflow, so a facility reports only on the services it provides.
 * Configurable implementation — countries may add or remove metadata according to national policies.
 * Analytics first — metadata is designed so indicators and dashboards work immediately after installation.
-* ECIM alignment — data elements are selected because they contribute to WHO ECIM monitoring.
+* Global reporting alignment — data elements are selected because they contribute to WHO monitoring.
 * Consistency across levels — the same concept is named, structured and disaggregated the same way at every level of care, so that reporting can be compared across the system rather than only within one level.
 
 ## 5. System Design Overview
@@ -78,7 +79,7 @@ Core design principles
 | --------------- | ------------------------------------------------------------------------------------------- |
 | **Facility**    | Service delivery points submit the modules they are commissioned to report on.              |
 | **Subnational** | District or county offices validate facility submissions and analyse subnational indicators.|
-| **National**    | Ministry of Health reports national ECIM indicators and monitors eCSC / eREC progress.      |
+| **National**    | Ministry of Health reports national eye care indicators and monitors eCSC / eREC progress.  |
 
 **DHIS2 Configuration Components**
 
@@ -86,25 +87,25 @@ Core design principles
 | -------------------------------------- | --------------------------------------------------------------------- |
 | **Datasets**                           | Monthly reporting forms, one per workflow module.                     |
 | **Data Elements**                      | Individual eye care variables.                                        |
-| **Category Combinations**              | Sex, age band, condition, intervention, surgeon type and other disaggregations. |
+| **Category Combinations**              | Sex, age band, condition, interventionand other disaggregations.      |
 | **Sections**                           | The common structure applied to each reporting form.                  |
 | **Data Entry Forms**                   | Section forms used for web and Android data entry.                    |
-| **Indicators**                         | ECIM calculations and derived eye care measures.                      |
-| **Data Element and Indicator Groups** | Grouping for analysis and for navigating the package.                 |
-| **Dashboards and Visualisations**     | Visual monitoring across ECIM targets.                                |
+| **Indicators**                         | WHO standard calculations and derived eye care measures.              |
+| **Data Element and Indicator Groups**  | Grouping for analysis and for navigating the package.                 |
+| **Dashboards and Visualisations**      | Visual monitoring across eye care targets.                            |
 | **User Groups**                        | Access to metadata, data and dashboards.                              |
 
 ## 6. Toolkit Structure
 
 The toolkit contains five datasets, each one aligned to a distinct eye care workflow.
 
-| Dataset                   | Frequency | Reporting Level | Scope                                                              |
-| ------------------------- | --------- | --------------- | ------------------------------------------------------------------ |
-| **EC Cataract Surgery**   | Monthly   | Facility        | Cataract surgical pathway: listing, surgery, outcomes, complications.|
-| **EC Utilisation**        | Monthly   | Facility        | New cases, primary condition, vision status at presentation.         |
-| **EC Referral**           | Monthly   | Facility        | Referral in by source and service, outreach referral uptake.         |
-| **EC Refractive Error**   | Monthly   | Facility        | Uncorrected refractive error identification, intervention and outcome.|
-| **EC Assistive Products** | Monthly   | Facility        | AP need identified and AP provision by product type.                 |
+| Dataset                   | Frequency | Reporting Level | Scope                                                                      |
+| ------------------------- | --------- | --------------- | ---------------------------------------------------------------------------|
+| **Cataract Surgery**      | Monthly   | Facility        | Cataract surgical pathway: listing, surgery, outcomes, complications.      |
+| **EC Utilisation**        | Monthly   | Facility        | New cases, interventions, primary condition, vision status at presentation.|
+| **EC Referral**           | Monthly   | Facility        | Referral pathway, in by source and service.                                |
+| **Refractive Error**      | Monthly   | Facility        | Uncorrected refractive error identification, intervention and outcome.     |
+| **EC Assistive Products** | Monthly   | Facility        | AP need identified and AP provision by product type.                       |
 
 **Why five datasets rather than one.** A single large dataset would force every facility to report on every workflow, including those it does not deliver. A primary eye care post that only screens and refers does not perform cataract surgery; a tertiary cataract centre may not run outreach referral. Splitting the package into five workflow-aligned modules lets an implementation commission each facility onto the datasets that match the services it actually provides. Shared denominator data elements (new cases by sex and age, for example) appear in more than one dataset where needed, so cross-module indicators continue to work.
 
@@ -112,19 +113,19 @@ The toolkit contains five datasets, each one aligned to a distinct eye care work
 
 Every dataset follows the same section ordering, so a reporting officer moving between modules encounters the same layout, and an analyst comparing two modules is comparing like with like.
 
-| # | Section                                 | Collects                                                                                               |
-| - | --------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| 1 | Service context                         | Service setting (OPD / IPD / community / outreach), reporting period.                                   |
-| 2 | Case denominators                       | New cases by sex and age (shared across modules that need the denominator).                            |
+| # | Section                                 | Collects                                                                                                |
+| - | --------------------------------------- | --------------------------------------------------------------------------------------------------------|
+| 1 | Service context                         | Service setting (OPD / IPD / community ), reporting period.                                             |
+| 2 | Case denominators                       | New cases by sex and age (shared across modules that need the denominator).                             |
 | 3 | Workflow-specific inputs                | The variables unique to the module: cataract pathway, RE assessment, referral in, AP need and provision.|
-| 4 | Workflow-specific outcomes              | The outcome variables for the module: surgical outcome, RE outcome, referral uptake, AP met-need.      |
-| 5 | Disaggregation-driven breakdown rows    | Variables that carry a disaggregation (surgeon type, drop-out reason, intervention type, RE type).      |
+| 4 | Workflow-specific outcomes              | The outcome variables for the module: surgical outcome, RE outcome, referral pathway, AP met-need.      |
+| 5 | Disaggregation-driven breakdown rows    | Variables that carry a disaggregation ( drop-out reason, intervention type, RE type).                   |
 
 The exception is **EC Utilisation**, which has no workflow-specific inputs section — the module exists to characterise the case-mix at presentation and feeds the denominator for most of the other indicators.
 
 ### 6.2 Shared denominators and the new-case concept
 
-A single conceptual data element — new eye care cases in the reporting period, disaggregated by sex and age band — is used as the denominator for utilisation indicators (ECIM EC09) and as the base for referral uptake and assistive product need indicators. It is defined once and referenced from each dataset that needs it, rather than being redefined per module. This keeps the arithmetic consistent across the package: a change to the age banding, for example, propagates to every indicator that uses the denominator.
+A single conceptual data element — new eye care cases in the reporting period, disaggregated by sex and age band — is used as the denominator for utilisation indicators  and as the base for referral uptake and assistive product need indicators. It is defined once and referenced from each dataset that needs it, rather than being redefined per module. This keeps the arithmetic consistent across the package: a change to the age banding, for example, propagates to every indicator that uses the denominator.
 
 ### 6.3 Population estimates
 
@@ -134,32 +135,30 @@ The toolkit does **not** include a population dataset. Most target systems alrea
 
 ### 6.4 The Eye Care Facility List
 
-The toolkit includes an organisation unit group named **EC — Eye Care Facility List**, which ships empty. It is intended to contain every eye care service delivery point in the country at the organisation unit level where the datasets are captured, and it serves as the denominator for indicators that express service coverage as a proportion of eye care facilities (for example, the proportion of facilities offering refractive error services). Because its membership is entirely specific to a country's organisation unit hierarchy, it cannot be supplied with the package and must be populated during implementation.
+The toolkit includes an organisation unit group named **EC - Eye Care Facility List**, which ships empty. It is intended to contain every eye care service delivery point in the country at the organisation unit level where the datasets are captured, and it serves as the denominator for indicators that express service coverage as a proportion of eye care facilities (for example, the proportion of facilities offering refractive error services). Because its membership is entirely specific to a country's organisation unit hierarchy, it cannot be supplied with the package and must be populated during implementation.
 
-## 7. WHO ECIM Indicator Framework
+## 7. WHO standard indicators for case-based reporting on eye care
 
-The toolkit computes indicators across the WHO Eye Care Indicator Menu, grouped by workflow and separately in a WHO ECIM group that gathers the internationally reported measures in one place.
+The toolkit computes indicators from the standard case-based reporting module for eye care of WHO, grouped by workflow and separately in a  group that gathers the internationally reported measures in one place.
 
 | Code      | Title                                                                | What the toolkit computes                                                                                    |
 | --------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| **EC01**  | Pre-operative visual acuity for cataract surgery                     | Distribution of pre-op BCVA bands; disaggregated by sex and high-risk comorbidity.                           |
-| **EC02**  | Cataract surgery pre-operative drop-out rate                         | Listed for cataract surgery vs operated; disaggregated by drop-out reason.                                   |
-| **EC03**  | Time to cataract surgery                                             | Days between listing and surgery, aggregated per band.                                                       |
-| **EC04**  | Cataract surgical complications                                      | Intra-operative and post-operative complication rates; disaggregated by surgeon type and comorbidity.         |
-| **EC05**  | Cataract surgery post-operative drop-out rate                        | Listed for post-op review vs reviewed; disaggregated by reason.                                              |
-| **EC06**  | Post-operative visual acuity                                         | UCVA band distribution and ≥ 2-line improvement rate; disaggregated by cause of suboptimal outcome.          |
-| **EC07**  | Effective refractive correction rate after cataract surgery          | Post-op UCVA improved to good after RE correction, where UCVA was suboptimal due to refractive error.        |
+| **EC01**  | Pre-operative visual acuity for cataract surgery                     | Distribution of pre-op BCVA bands; disaggregated by sex.                           |
+| **EC02**  | Cataract surgery pre-operative drop-out rate                         | Listed for cataract surgery vs operated; disaggregated by pre-op vision status and first/second eye.                                   |
+| **EC03**  | Time to cataract surgery                                             | Days between listing and surgery, disaggregated by sex.                                                       |
+| **EC04**  | Cataract surgical complications                                      | Intra-operative and post-operative complication rates; disaggregated by comorbidity at risk.         |
+| **EC05**  | Cataract surgery post-operative drop-out rate                        | Listed for post-op review vs reviewed; disaggregated by reason for drop-out.                                              |
+| **EC06**  | Post-operative visual acuity                                         | UCVA band distribution; disaggregated by cause of suboptimal outcome and ≥ 2-line improvement.          |
+| **EC07**  | Effective refractive correction rate after cataract surgery          | Post-op PVA improved to good after RE correction, where UCVA was suboptimal due to refractive error, disaggregated by surgery type.        |
 | **EC09**  | Eye care services utilisation                                        | New cases by sex, age band, primary condition, vision status, service setting.                               |
 | **EC10**  | Eye care interventions distribution                                  | Interventions delivered, by WHO category.                                                                    |
 | **EC11**  | Referral in for eye care                                             | Referrals received by source and by service type.                                                            |
 | **EC12**  | Assistive products need and provision in eye care                    | Need identified vs provided, by AP type.                                                                      |
 | **EC13**  | Effective refractive intervention rate                               | RE intervention delivered with good outcome, disaggregated by RE type.                                        |
-| **EC14**  | Refractive intervention rate                                         | Uncorrected RE identified vs intervention delivered, disaggregated by RE type.                                |
-| **EC15**  | Referral uptake for eye care                                         | Patients referred from community outreach who presented for eye care.                                         |
 
-**ECIM EC08 — Diabetic retinopathy screening coverage — is deliberately out of scope for the aggregate reference package.** Diabetic retinopathy screening is addressed in the companion tracker reference design, where it is modelled as an optional case-management stage; facilities that run DR screening programmes capture and analyse DR coverage through the tracker rather than through the aggregate reporting modules. An implementation that needs DR screening data in aggregate form adds a sixth module locally; the reference package does not ship one.
+** Diabetic retinopathy screening — is deliberately out of scope for the aggregate reference package.** Diabetic retinopathy screening is addressed in the companion tracker reference design, where it is modelled as an optional case-management stage; facilities that run DR screening programmes capture and analyse DR coverage through the tracker rather than through the aggregate reporting modules. An implementation that needs DR screening data in aggregate form adds a sixth module locally; the reference package does not ship one.
 
-Alongside the WHO ECIM indicators, each workflow has its own indicator group covering measures a programme manager needs for day-to-day management rather than for international reporting — surgical volume by facility and surgeon type, cataract audit outcomes against local targets, RE service throughput, referral in volume by source, AP stock-out proxies and so on.
+Alongside the WHO indicators, each workflow has its own indicator group covering measures a programme manager needs for day-to-day management rather than for international reporting — surgical volume by facility and surgeon type, cataract audit outcomes against local targets, RE service throughput, referral in volume by source, AP stock-out proxies and so on.
 
 ### 7.1 Extending the indicator set
 
@@ -167,8 +166,8 @@ The toolkit collects more than it currently computes, deliberately. Several exte
 
 * **Equity analysis.** Every workflow measure is disaggregated by sex, and most by age band. Parity indices between population groups can be derived from the data already collected.
 * **Facility performance benchmarking.** Surgical volume, pre-op VA mix and complication rates are collected per facility; percentile and rank indicators can be configured locally without additional data entry.
-* **Trend analysis across the cataract audit cycle.** The audit variables (pre-op BCVA, surgeon type, complications, post-op UCVA, cause of suboptimal outcome) are already in the dataset. Period-over-period indicators can be defined on top.
-* **Insurance and payment analysis.** Several country implementations extend the service context section with an insurance or payment data element. In Kenya this carries the National Hospital Insurance Fund (NHIF) option, and derived indicators report service coverage by payment type.
+* **Trend analysis across the cataract audit cycle.** The audit variables (pre-op BCVA, complications, post-op UCVA, cause of suboptimal outcome) are already in the dataset. Period-over-period indicators can be defined on top.
+* **Insurance and payment analysis.** Several country implementations extend the service context section with an insurance or payment data element. 
 
 These were left as configuration points rather than shipped indicators because the exact definition — which age bands, which comparison groups, which reference population — varies between countries and between reporting frameworks. The data is in place; the calculation is a local decision.
 
@@ -179,17 +178,17 @@ Disaggregation is where most of the design effort sits, and it follows a small n
 | Family                                   | Applied to                                                                                               |
 | ---------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | **Sex**                                  | Almost everything, so that every headline measure can be reported by sex.                                 |
-| **Age band**                             | New cases, cataract surgery outcomes, AP need and provision, RE outcomes. Cataract indicators run on sex only in the reference package following the current ECIM revision. |
-| **Primary condition** (WHO 7)            | Utilisation reporting (EC09): cataract, refractive error, diabetic retinopathy, glaucoma, corneal, other posterior segment, other anterior segment.                       |
-| **Intervention category**                | Interventions distribution (EC10): seven WHO intervention categories.                                     |
-| **Surgeon type**                         | Cataract complications and outcomes, where a country collects surgeon type (ophthalmologist, clinical officer, cataract surgeon, resident). |
-| **Pre-op BCVA band**                     | Pre-op visual acuity reporting (EC01).                                                                   |
-| **Post-op UCVA band**                    | Post-op visual acuity and effective correction (EC06, EC07).                                             |
-| **Drop-out reason**                      | Pre-operative drop-out (EC02 — up to nine reasons in national extensions) and post-operative drop-out (EC05 — eight reasons). |
-| **Referral source** × **service type**   | Referral in reporting (EC11): seven sources by three service types.                                      |
-| **Refractive error type**                | RE indicators (EC13, EC14): distance, near, combined.                                                     |
+| **Age band**                             | New cases, cataract surgery outcomes, AP need and provision, RE outcomes. Cataract indicators run on sex only in the reference package. |
+| **Primary condition**             | Utilisation reporting : cataract, refractive error, diabetic retinopathy, glaucoma, corneal, other posterior segment, other anterior segment.                       |
+| **Intervention category**                | Interventions distribution: twelve WHO intervention categories.                                     |
+| 
+| **Pre-op BCVA band**                     | Pre-op visual acuity reporting .                                                                   |
+| **Post-op UCVA band**                    | Post-op visual acuity and effective RE correction.                                             |
+| **Drop-out reason**                      | Pre-operative drop-out ( up to nine reasons in national extensions) and post-operative drop-out (eight reasons). |
+| **Referral source** | Referral in reporting for selected service type : seven sources.                                      |
+| **Refractive error type**                | RE indicators: distance, near, combined.                                                     |
 | **Assistive product type**               | AP need and provision indicators (EC12).                                                                 |
-| **Service setting**                      | OPD, IPD, community, outreach — carried on every workflow module and mirrored across stages in the tracker companion design. |
+| **Service setting**                      | OPD, IPD, community — carried on every workflow module and mirrored across stages in the tracker companion design. |
 
 Country implementations are expected to extend the disaggregation lists where their policies require more — Kenya adds a nine-reason pre-operative drop-out list and a four-level surgeon type list, both of which the reference package carries as the default option sets following that implementation experience.
 
@@ -203,21 +202,21 @@ Where a country already uses a custom paper census form or a tablet-based captur
 
 ## 10. Analytics and Dashboard
 
-*[Chapter to be developed. The reference package will ship a set of dashboards aligned to the WHO ECIM target families; this section will describe their structure, intended audience and content once the dashboards have been built.]*
+*[Chapter to be developed. The reference package will ship a set of dashboards aligned to the WHO target families; this section will describe their structure, intended audience and content once the dashboards have been built.]*
 
 ![](resources/images/eye_care_dashboard_overview.png)
 *Placeholder — Eye Care dashboard overview.*
 
-### 10.1 WHO ECIM dashboard
+### 10.1 WHO dashboard
 
 *[Placeholder — to be filled once the dashboard is built.]*
 
 ![](resources/images/eye_care_ecim_dashboard.png)
-*Placeholder — WHO ECIM indicator dashboard.*
+*Placeholder — WHO indicator dashboard.*
 
 ### 10.2 Cataract surgical audit dashboard
 
-*[Placeholder — to be filled once the dashboard is built. Expected contents: pre-op BCVA mix, surgical volume, complication rates, post-op UCVA distribution, cause of suboptimal outcome, surgeon-level benchmarking.]*
+*[Placeholder — to be filled once the dashboard is built. Expected contents: pre-op BCVA mix, surgical volume, complication rates, post-op UCVA distribution, cause of suboptimal outcome, .]*
 
 ![](resources/images/eye_care_cataract_audit_dashboard.png)
 *Placeholder — Cataract surgical audit dashboard.*
@@ -261,7 +260,7 @@ The toolkit metadata is currently available in English. Translation to additiona
 | **Facility reporting officers**         | Capture the monthly dataset(s) commissioned for the facility.                   |
 | **Facility clinical leads**             | Review facility-level dashboards and act on cataract audit outcomes.            |
 | **District / county eye care coordinators** | Validate facility submissions and analyse subnational indicators.           |
-| **National eye health programme managers** | Monitor ECIM indicators, dashboards and progress against eCSC / eREC targets. |
+| **National eye health programme managers** | Monitor indicators, dashboards and progress against eCSC / eREC targets. |
 | **Planning departments**                | Resource allocation across facilities and workflow modules.                     |
 | **Development partners**                | Programme monitoring and reporting against international frameworks.            |
 
@@ -289,3 +288,4 @@ The toolkit is a starting point. Implementations are expected to change it, and 
 * **Pairing with the case-based tracker.** For facilities that need case-level eye care data — cataract audit at surgical level, patient-level AP provision history — the companion tracker reference design can be deployed alongside the aggregate package; the tracker and the aggregate datasets share the same indicator definitions where they overlap.
 
 What the toolkit does not include, and does not attempt to provide: an organisation unit hierarchy, population estimates, validation rules, data quality thresholds, or any national target values. These belong to the implementation, not to a reference package.
+
