@@ -132,7 +132,7 @@ Each dataset is divided into sections that group data elements by clinical conce
 
 | # | Section                        |
 | - | ------------------------------ |
-| 1 | New cases (overall)            |
+| 1 | New cases (total)            |
 | 2 | New cases by eye condition     |
 | 3 | Eye care interventions         |
 
