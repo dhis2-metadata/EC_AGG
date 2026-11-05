@@ -109,19 +109,58 @@ The toolkit contains five datasets, each one aligned to a distinct eye care work
 
 **Why five datasets rather than one.** A single large dataset would force every facility to report on every workflow, including those it does not deliver. A primary eye care post that only screens and refers does not perform cataract surgery; a tertiary cataract centre may not run outreach referral. Splitting the package into five workflow-aligned modules lets an implementation commission each facility onto the datasets that match the services it actually provides. Shared denominator data elements (new cases by sex and age, for example) appear in more than one dataset where needed, so cross-module indicators continue to work.
 
-### 6.1 A common structure across datasets
+### 6.1 Dataset section structure
 
-Every dataset follows the same section ordering, so a reporting officer moving between modules encounters the same layout, and an analyst comparing two modules is comparing like with like.
+Each dataset is divided into sections that group data elements by clinical concept. Section titles appear in the data entry form and in analytics. The sections per dataset:
 
-| # | Section                                 | Collects                                                                                                |
-| - | --------------------------------------- | --------------------------------------------------------------------------------------------------------|
-| 1 | Service context                         | Service setting (OPD / IPD / community ), reporting period.                                             |
-| 2 | Case denominators                       | New cases by sex and age (shared across modules that need the denominator).                             |
-| 3 | Workflow-specific inputs                | The variables unique to the module: cataract pathway, RE assessment, referral in, AP need and provision.|
-| 4 | Workflow-specific outcomes              | The outcome variables for the module: surgical outcome, RE outcome, referral pathway, AP met-need.      |
-| 5 | Disaggregation-driven breakdown rows    | Variables that carry a disaggregation ( drop-out reason, intervention type, RE type).                   |
+**Cataract Surgery** — 10 sections
 
-The exception is **EC Utilisation**, which has no workflow-specific inputs section — the module exists to characterise the case-mix at presentation and feeds the denominator for most of the other indicators.
+| # | Section                                       |
+| - | --------------------------------------------- |
+| 1 | Pre-operative visual acuity (BCVA)            |
+| 2 | Advised for cataract surgery (listing)        |
+| 3 | Pre-operative drop-outs by BCVA band          |
+| 4 | Pre-operative drop-out reasons                |
+| 5 | Cataract surgery volume                       |
+| 6 | Time to cataract surgery (waiting days)       |
+| 7 | Cataract surgical complications               |
+| 8 | Post-operative outcomes (UCVA)                |
+| 9 | Post-operative scheduled & drop-outs          |
+| 10| Post-cataract refractive error correction     |
+
+**EC Utilisation** — 3 sections
+
+| # | Section                        |
+| - | ------------------------------ |
+| 1 | New cases (overall)            |
+| 2 | New cases by eye condition     |
+| 3 | Eye care interventions         |
+
+**EC Referral** — 2 sections
+
+| # | Section                              |
+| - | ------------------------------------ |
+| 1 | Referrals in                         |
+| 2 | Outreach referrals and uptake        |
+
+**Refractive Error** — 3 sections
+
+| # | Section                                        |
+| - | ---------------------------------------------- |
+| 1 | Uncorrected refractive error identified        |
+| 2 | RE intervention delivered                      |
+| 3 | RE intervention — good outcome                 |
+
+**EC Assistive Products** — 2 sections
+
+| # | Section                           |
+| - | --------------------------------- |
+| 1 | Assistive product need            |
+| 2 | Assistive product provision       |
+
+**EC Utilisation** holds the shared case denominator. The data element for new cases by sex and age lives in **EC Utilisation** only; indicators in **EC Referral** and **EC Assistive Products** that need it as denominator reference the data element directly in their formula, without the data element being a member of those datasets.
+
+Form row labels in every section use the clinical subject only — disaggregation (sex, age, setting, surgeon type, intervention category, RE type, assistive product type) appears as column headers in the data entry table, not in the row label.
 
 ### 6.2 Shared denominators and the new-case concept
 
