@@ -132,7 +132,7 @@ Each dataset is divided into sections that group data elements by clinical conce
 
 | # | Section                        |
 | - | ------------------------------ |
-| 1 | New cases (total)            |
+| 1 | New cases (total)              |
 | 2 | New cases by eye condition     |
 | 3 | Eye care interventions         |
 
@@ -220,8 +220,7 @@ Disaggregation is where most of the design effort sits, and it follows a small n
 | **Age band**                             | New cases, cataract surgery outcomes, AP need and provision, RE outcomes. Cataract indicators run on sex only in the reference package. |
 | **Primary condition**             | Utilisation reporting : cataract, refractive error, diabetic retinopathy, glaucoma, corneal, other posterior segment, other anterior segment.                       |
 | **Intervention category**                | Interventions distribution: twelve WHO intervention categories.                                     |
-| 
-| **Pre-op BCVA band**                     | Pre-op visual acuity reporting .                                                                   |
+| **Pre-op BCVA band**                     | Pre-op visual acuity reporting.                                                                    |
 | **Post-op UCVA band**                    | Post-op visual acuity and effective RE correction.                                             |
 | **Drop-out reason**                      | Pre-operative drop-out ( up to nine reasons in national extensions) and post-operative drop-out (eight reasons). |
 | **Referral source** | Referral in reporting for selected service type : seven sources.                                      |
